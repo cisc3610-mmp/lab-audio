@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lab-Audio</title>
+    </head>
+    <body>
+        <h1>Sound Machine</h1>
+        <div id="buttons" style="border: 2px solid black; padding: 1rem; display: inline-flex">
+            <button onclick="playAudio('ding')" type="button" style="padding: 2rem; margin: 0 0.5rem">
+                <audio id="ding"><source src="assets/audio/Ding-sound-effect.mp3" type="audio/mp3"></audio>
+                <b>Ding</b>
+            </button>
+            <button onclick="playAudio('door-knock')" type="button" style="padding: 2rem; margin: 0 0.5rem">
+                <audio id="door-knock"><source src="assets/audio/Door-knock-sound-effect.mp3" type="audio/mp3"></audio>
+                <b>Door Knock</b>
+            </button>
+            <button onclick="playAudio('duck-quack')" type="button" style="padding: 2rem; margin: 0 0.5rem">
+                <audio id="duck-quack"><source src="assets/audio/Duck-quack.mp3" type="audio/mp3"></audio>
+                <b>Duck Quack</b>
+            </button>
+            <button onclick="playAudio('heartbeat')" type="button" style="padding: 2rem; margin: 0 0.5rem">
+                <audio id="heartbeat"><source src="assets/audio/Heartbeat-sound-effect.mp3" type="audio/mp3"></audio>
+                <b>Heartbeat</b>
+            </button>
+            <button onclick="playAudio('tada')" type="button" style="padding: 2rem; margin: 0 0.5rem">
+                <audio id="tada"><source src="assets/audio/Tada-sound.mp3" type="audio/mp3"></audio>
+                <b>Tada</b>
+            </button>
+        </div>
+        <br/><br/>
+        <a href='https://cisc3610-mmp.github.io/portfolio/'>Go back to portfolio</a>
+
+        <script>
+            function playAudio(el)
+            {
+                let audio = document.getElementById(el);
+                audio.play();
+            }
+        </script>
+    </body>
+</html>
